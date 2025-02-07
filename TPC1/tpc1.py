@@ -4,7 +4,7 @@ stdin = "".join(fileinput.input())
 total = 0 
 i = 0
 value = 0
-active = 0  # Start inactive to allow summing numbers by default
+active = 1
 
 while i < len(stdin):
     if stdin[i] in "0123456789" and active == 1:
