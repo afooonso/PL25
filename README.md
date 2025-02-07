@@ -2,13 +2,13 @@
 
 ![Afonso Pedreira](https://avatars.githubusercontent.com/u/95723167?v=4)  
 
-## Author  
+## 👨 Author  
 **Name:** Afonso Gonçalves Pedreira  
 **Student Number:** A104537  
 **Course:** Software Engineering  
 **Academic Year:** 2024/2025  
 
-## Date  
+## 📅 Date  
 07-02-2025  
 
 ## 📖 UC 
