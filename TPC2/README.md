@@ -37,8 +37,6 @@ $ python tpc2.py < obras.csv
 
 ## Resultados
 
-## Resultados
-
 ### 📜 Lista ordenada alfabeticamente dos compositores musicais
 O programa gera uma lista ordenada alfabeticamente dos compositores musicais, respeitando os acentos e caracteres especiais.
 ![Lista de Compositores](./assets/compositores.png)
