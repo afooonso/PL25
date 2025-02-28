@@ -5,7 +5,7 @@
 ## Autor 👨‍💻  
 **Nome:** Afonso Gonçalves Pedreira  
 **Número:** A104537  
-**Curso:** Engenharia de Software  
+**Curso:** Engenharia Informática  
 **Ano:** 2024/2025  
 
 ## Descrição do problema
