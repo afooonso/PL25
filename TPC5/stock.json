@@ -1,0 +1,32 @@
+[
+    {
+        "code": "A23",
+        "name": "água 0.5L",
+        "quantity": 6,
+        "price": 0.7
+    },
+    {
+        "code": "B45",
+        "name": "batata frita 100g",
+        "quantity": 15,
+        "price": 1.2
+    },
+    {
+        "code": "C67",
+        "name": "chocolate 50g",
+        "quantity": 10,
+        "price": 1.5
+    },
+    {
+        "code": "D89",
+        "name": "biscoitos 200g",
+        "quantity": 20,
+        "price": 2.0
+    },
+    {
+        "code": "E12",
+        "name": "amendoins 150g",
+        "quantity": 25,
+        "price": 1.8
+    }
+]
