@@ -1,7 +1,5 @@
 # PL2025  
 
-![Picture](https://avatars.githubusercontent.com/u/95723167?v=4)  
-
 ## Author  
 **Name:** Afonso Gonçalves Pedreira  
 **Student Number:** A104537  
