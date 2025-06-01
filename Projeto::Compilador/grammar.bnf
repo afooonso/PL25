@@ -1,0 +1,110 @@
+program : kPROGRAM yNAME oSEMI program_block oDOT
+
+program_block : declarations compound_statement
+
+declarations : var_declaration declarations
+             | empty
+
+var_declaration : kVAR var_declaration_list oSEMI
+
+var_declaration_list : var_declaration_item
+                     | var_declaration_list oSEMI var_declaration_item
+
+var_declaration_item : name_list oCOLON type_spec
+
+name_list : yNAME
+          | name_list oCOMMA yNAME
+
+type_spec : SYS_TYPE
+          | yNAME
+          | array_type
+
+array_type : kARRAY oLB index_range oRB kOF type_spec
+
+index_range : expression oDOTDOT expression
+
+compound_statement : kBEGIN statement_list kEND
+
+statement_list : statement
+               | statement_list oSEMI statement
+
+statement : if_statement
+          | assignment_statement
+          | procedure_call
+          | compound_statement
+          | while_statement
+          | for_statement
+          | empty
+
+if_statement : kIF expression kTHEN statement %prec kTHEN
+             | kIF expression kTHEN statement else_part
+
+else_part : kELSE statement
+
+assignment_statement : lvalue oASSIGN expression
+
+procedure_call : yNAME
+               | SYS_PROC oLP argument_list oRP
+               | SYS_PROC
+
+argument_list : expression
+              | argument_list oCOMMA expression
+
+while_statement : kWHILE expression kDO statement
+
+for_statement : kFOR yNAME oASSIGN expression direction expression kDO statement
+
+direction : kTO
+          | kDOWNTO
+
+expression : simple_expression
+           | simple_expression relop simple_expression
+
+relop : oEQUAL
+      | oUNEQU
+      | oLT
+      | oLE
+      | oGT
+      | oGE
+
+simple_expression : term
+                  | sign term
+                  | simple_expression addop term
+
+sign : oPLUS
+     | oMINUS
+
+addop : oPLUS
+      | oMINUS
+      | kOR
+
+term : factor
+     | term mulop factor
+
+mulop : oMUL
+      | oDIV
+      | kDIV
+      | kMOD
+      | kAND
+
+lvalue : yNAME
+       | yNAME oLB expression oRB
+
+factor : lvalue
+       | number
+       | cBOO
+       | char_literal
+       | string
+       | oLP expression oRP
+       | kNOT factor
+       | SYS_FUNCT oLP argument_list oRP
+       | SYS_FUNCT
+
+number : cINTEGER
+       | cREAL
+
+string : cSTRING
+
+char_literal : cCHAR
+
+empty :
