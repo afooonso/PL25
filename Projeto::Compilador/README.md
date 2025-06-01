@@ -4,6 +4,7 @@ Este projeto consiste no desenvolvimento de um compilador da linguagem Pascal St
 
 ## Estrutura do Projeto
 
+- `report/` — Contém o relatório detalhado da implementação do compilador
 - `lex_pas.py` — Analisador léxico construído com o PLY (`lex`)
 - `yacc_pas.py` — Analisador sintático com construção de AST e geração de código (com `ply.yacc`)
 - `ast_nodes.py` — Definições dos nós da AST (árvore sintática abstrata)
